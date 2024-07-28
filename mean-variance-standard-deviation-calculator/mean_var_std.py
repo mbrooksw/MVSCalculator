@@ -6,7 +6,7 @@ def mean_value(np_matrix):
     mean0 = np_matrix.mean(0).tolist()
     mean1 = np_matrix.mean(1).tolist()
     meanV = [mean0, mean1, meanX]
-    return meanV
+    return meanValue
 
 
 def var_value(np_matrix):
