@@ -69,11 +69,11 @@ def calculate(list):
         np_matrix = np.array(list).reshape(3, 3)
 
     # calculate & assign the valeus for the keys in the dictionary
-    calculation["mean"].append(mean_value(np_matrix))
-    calculation["variance"].append(var_value(np_matrix))
-    calculation["standard deviation"].append(std_value(np_matrix))
-    calculation["max"].append(max_value(np_matrix))
-    calculation["min"].append(min_value(np_matrix))
-    calculation["sum"].append(sum_value(np_matrix))
+    calculation.update(mean=mean_value(np_matrix))
+    calculation.update(variance=var_value(np_matrix))
+    calculation["standard deviation"] = std_value(np_matrix)
+    calculation.update(max=max_value(np_matrix))
+    calculation.update(min=min_value(np_matrix))
+    calculation.update(sum=sum_value(np_matrix))
 
     return calculation
